@@ -7,7 +7,7 @@ ___
 ## Important Notes
 ___
 
-
+Please disregard the spelling and grammar mistakes, spellcheck not applied yet. 😁
 
 ## Log Sources
 ___
