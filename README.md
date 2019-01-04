@@ -184,7 +184,6 @@ Macro to find identities: `` |`identities` ``
 |search category="PCI" ip="*"
 |stats dc(ip) as dc_ip values(ip) as ip by city 
 |where dc_ip>3
-
 ```
 
 **Running `eval` to evaluate the class type for each ip and output the ip and class**
