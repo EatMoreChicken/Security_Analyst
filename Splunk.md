@@ -31,3 +31,33 @@ Description: For this search, we will be looking at the "assets" table and findi
     ```
     
     We can see that now all of the entries contain values for the "ip" field. The `*` (Wildcard) in the command tells Splunk to only show entries that have values in any field specified.
+
+## Rename
+
+This string can be used to rename a field as something else. This is a simple way to do it, many Splunk commands allow you to rename fields within the command itself.
+
+`|rename <field> as <new_flield>`
+
+## Eval
+
+TODO
+
+## Macros
+
+### drop_dm_object_name
+
+This macro allows you to drop the Datamodel object name from the field title.
+
+``|`drop_dm_object_name(All_Traffic)` ``
+
+### assets
+
+Macro used to find assets. _Note: Information in the assests macro may be manually enters and could be out dated. Do not reply completely on the information that this provides._
+
+`` |`assets` ``
+
+### identities
+
+Populates availible identities that are in your instance.
+
+`` |`identities` ``
