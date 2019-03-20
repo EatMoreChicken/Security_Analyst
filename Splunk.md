@@ -24,7 +24,8 @@ Description: For this search, we will be looking at the "assets" table and findi
 
 2. We don't need all of the information presented in the table currently. Also, notice that not all of the entries contain data for the "ip" field. We are going to only pull out entries for assets that contain IPs associated with them.
 
-    Command: ```
+    Command: 
+    ```
     |`assets`
     |search ip="*"
     ```
