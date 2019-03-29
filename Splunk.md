@@ -91,3 +91,10 @@ Example:
     where nodename=All_Traffic.Traffic_By_Action.Allowed_Traffic
     by _time, All_Traffic.scr_ip, span=1h
 ```
+### Datamodel
+
+Used to search through a datamodel.
+
+`|datamodel <datamodel_name> <optional_datamodel_node> search`
+
+Example: `|datamodel Network_Traffic All_Traffic.Allowed search`
