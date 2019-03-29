@@ -61,3 +61,13 @@ Macro used to find assets. _Note: Information in the assests macro may be manual
 Populates availible identities that are in your instance.
 
 `` |`identities` ``
+
+## Commands
+
+### Stats
+
+Allows you to appregate statictical data from logs.
+
+`| stats [function](field) as [new_name] by [sort_by_field]`
+
+Example: `|stats values(dest_ip) as dest_ip by src_ip`
