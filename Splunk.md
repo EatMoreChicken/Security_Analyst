@@ -71,3 +71,23 @@ Allows you to appregate statictical data from logs.
 `| stats [function](field) as [new_name] by [sort_by_field]`
 
 Example: `|stats values(dest_ip) as dest_ip by src_ip`
+
+### Tstats
+
+Tstats is used to conduct "statistical queries" on indexed fields. These indexed fields can be from data models. This command makes searching through large amounts of data extremly fast. 
+
+```
+|tstas [function](field) as [new_field_name]
+    from datamodel=[]
+    where [field]=[value]
+    by [field], [optional_field], [optional span "span=1h"]
+```
+
+Example:
+
+```
+|tstats values(All_Traffic. dest_ip) as dest_ip
+    from datamodel=Network_Traffic.All_Traffic
+    where nodename=All_Traffic.Traffic_By_Action.Allowed_Traffic
+    by _time, All_Traffic.scr_ip, span=1h
+```
